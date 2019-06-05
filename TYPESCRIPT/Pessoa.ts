@@ -5,7 +5,7 @@ export default class Pessoa {
     private carroPreferido: string
     private carro: Carro
 
-    constructor(nome:string, carroPreferido: string) {
+    constructor(nome: string, carroPreferido: string) {
         this.nome = nome
         this.carroPreferido = carroPreferido
     }

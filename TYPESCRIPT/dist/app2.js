@@ -7,12 +7,12 @@ var Carro_1 = __importDefault(require("./Carro"));
 var Pessoa_1 = __importDefault(require("./Pessoa"));
 var Concessionaria_1 = __importDefault(require("./Concessionaria"));
 /*----CRIAR CARROS----*/
-var carroA = new Carro_1.default('Dodge Journey', 4);
-var carroB = new Carro_1.default('Veloster', 3);
-var carroC = new Carro_1.default('Cerato', 4);
+var carroA = new Carro_1.default('dodge journey', 4);
+var carroB = new Carro_1.default('veloster', 3);
+var carroC = new Carro_1.default('cerato', 4);
 /* ----MONTAR A LISTA DE CARROS DA CONCESSIONARIA---- */
-var listaDeCasrros = [carroA, carroB, carroC];
-var concessionaria = new Concessionaria_1.default('Av Paulista', listaDeCasrros);
+var listaDeCarros = [carroA, carroB, carroC];
+var concessionaria = new Concessionaria_1.default('Av Paulista', listaDeCarros);
 /* ----EXIBIR A LISTA DE CARROS---- */
 //console.log(concessionaria.mostrarListaDeCarros())
 /* ----COMPRAR O CARRO---- */
@@ -23,4 +23,4 @@ concessionaria.mostrarListaDeCarros().map(function (carro) {
         cliente.comprarCarro(carro);
     }
 });
-console.log(cliente.dizerCarroQueTem);
+console.log(cliente.dizerCarroQueTem());

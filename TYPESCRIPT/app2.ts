@@ -2,18 +2,16 @@ import Carro from './Carro'
 import Pessoa from './Pessoa'
 import Concessionaria from './Concessionaria'
 
-
 /*----CRIAR CARROS----*/
-
-let carroA = new Carro('Dodge Journey', 4)
-let carroB = new Carro('Veloster', 3)
-let carroC = new Carro('Cerato', 4)
-
+let carroA = new Carro('dodge journey', 4)
+let carroB = new Carro('veloster', 3)
+let carroC = new Carro('cerato', 4)
 
 /* ----MONTAR A LISTA DE CARROS DA CONCESSIONARIA---- */
-let listaDeCasrros: Carro[] = [carroA, carroB, carroC]
 
-let concessionaria = new Concessionaria('Av Paulista', listaDeCasrros)
+let listaDeCarros: Carro[] = [carroA, carroB, carroC]
+
+let concessionaria = new Concessionaria('Av Paulista', listaDeCarros)
 
 /* ----EXIBIR A LISTA DE CARROS---- */
 //console.log(concessionaria.mostrarListaDeCarros())
@@ -22,6 +20,7 @@ let concessionaria = new Concessionaria('Av Paulista', listaDeCasrros)
 let cliente = new Pessoa('João', 'veloster')
 
 concessionaria.mostrarListaDeCarros().map((carro: Carro) => {
+
     if(carro['modelo'] == cliente.dizerCarroPreferido()) {
         
         //COMPRAR O CARRO
@@ -29,4 +28,4 @@ concessionaria.mostrarListaDeCarros().map((carro: Carro) => {
     }
 })
 
-console.log(cliente.dizerCarroQueTem)
+console.log(cliente.dizerCarroQueTem())
