@@ -3,13 +3,28 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var ConcessionariaDao_1 = require("./ConcessionariaDao");
+//import { ConcessionariaDao } from './ConcessionariaDao'
 var Concessionaria_1 = __importDefault(require("./Concessionaria"));
-var PessoaDao_1 = require("./PessoaDao");
+//import { PessoaDao } from './PessoaDao';
 var Pessoa_1 = __importDefault(require("./Pessoa"));
-var dao = new ConcessionariaDao_1.ConcessionariaDao();
+var Dao_1 = require("./Dao");
+//import { CarroDao } from './CarroDao'
+//import Carro from './Carro';
+//import { MotoDao } from './MotoDao'
+//import Moto from './Moto'
+//let dao: ConcessionariaDao = new ConcessionariaDao()
 var concessionaria = new Concessionaria_1.default('', []);
-dao.inserir(concessionaria);
-var dao2 = new PessoaDao_1.PessoaDao();
+//dao.inserir(concessionaria);
+//let dao2: PessoaDao = new PessoaDao()
 var pessoa = new Pessoa_1.default('', '');
-dao2.atualizar(pessoa);
+//dao2.atualizar(pessoa);
+//let dao3: CarroDao = new CarroDao()
+//let carro: Carro = new Carro('', 2)
+//dao3.remover(carro);
+//let dao4: MotoDao = new MotoDao()
+//let moto: Moto = new Moto()
+//dao4.selecionar(moto);
+var dao3 = new Dao_1.Dao();
+var dao4 = new Dao_1.Dao();
+dao3.inserir(concessionaria);
+dao4.remover(5);
